@@ -1,0 +1,13 @@
+@import '10-images.scss';
+
+$list-names: (
+    'John',
+    'Jane',
+    'Bob'
+);
+
+@each $name in $list-names {
+    .#{$name} {
+        background-image: map-get($list-images, $name);
+    }
+}
